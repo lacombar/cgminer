@@ -275,7 +275,7 @@ static inline int fsync (int fd)
 	ASIC_PARSE_COMMANDS(DRIVER_ADD_COMMAND)
 
 #define DRIVER_ENUM(X) DRIVER_##X,
-#define DRIVER_PROTOTYPE(X) struct device_drv X##_drv;
+#define DRIVER_PROTOTYPE(X) struct device_drv X##_drv __attribute__((weak));
 
 /* Create drv_driver enum from DRIVER_PARSE_COMMANDS macro */
 enum drv_driver {
